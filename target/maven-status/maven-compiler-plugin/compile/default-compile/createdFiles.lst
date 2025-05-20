@@ -1,0 +1,12 @@
+com\gire\pdf\creators\AdvancedTableBuilder.class
+com\gire\pdf\creators\LinkInserter.class
+com\gire\pdf\model\FontStyle.class
+com\gire\pdf\creators\PdfCreator.class
+com\gire\pdf\model\PageSize.class
+com\gire\pdf\creators\TableBuilder.class
+com\gire\pdf\App.class
+com\gire\pdf\creators\ImageInserter.class
+com\gire\pdf\model\TextAlignment.class
+com\gire\pdf\creators\ListBuilder.class
+com\gire\pdf\creators\ShapeDrawer.class
+com\gire\pdf\creators\ParagraphBuilder.class

@@ -1,0 +1,9 @@
+com\gire\pdf\creators\ImageInserterTest.class
+com\gire\pdf\creators\ShapeDrawerTest.class
+com\gire\pdf\creators\TableBuilderTest.class
+com\gire\pdf\creators\LinkInserterTest.class
+com\gire\pdf\creators\ParagraphBuilderTest.class
+com\gire\pdf\creators\ListBuilderTest.class
+com\gire\pdf\creators\AdvancedTableBuilderTest.class
+com\gire\pdf\creators\PdfCreatorTest.class
+com\gire\pdf\AppTest.class

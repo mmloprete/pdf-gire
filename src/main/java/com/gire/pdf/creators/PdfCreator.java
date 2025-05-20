@@ -1,0 +1,47 @@
+package com.gire.pdf.creators;
+
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDPage;
+import org.apache.pdfbox.pdmodel.PDPageContentStream;
+import org.apache.pdfbox.pdmodel.common.PDRectangle;
+import org.apache.pdfbox.pdmodel.font.PDType1Font;
+
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class PdfCreator {
+
+    private PDDocument document;
+
+    public PdfCreator() {
+        this.document = new PDDocument();
+    }
+
+    public PDPage addBlankPage() {
+        PDPage page = new PDPage(PDRectangle.A4);
+        document.addPage(page);
+        return page;
+    }
+
+    public void addText(PDPage page, String text, float x, float y) throws IOException {
+        try (PDPageContentStream contentStream = new PDPageContentStream(document, page)) {
+            contentStream.beginText();
+            contentStream.setFont(PDType1Font.HELVETICA, 12);
+            contentStream.newLineAtOffset(x, y);
+            contentStream.showText(text);
+            contentStream.endText();
+        }
+    }
+
+    public void saveTo(String filePath) throws IOException {
+        Path path = Paths.get(filePath);
+        document.save(path.toFile());
+        document.close();
+    }
+
+    public PDDocument getDocument() {
+        return document;
+    }
+
+}
