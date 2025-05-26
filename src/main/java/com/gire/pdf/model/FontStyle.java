@@ -1,24 +1,24 @@
 package com.gire.pdf.model;
 
+import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 
 public class FontStyle {
-    private final PDType1Font font;
+    private final PDFont font;
     private final float fontSize;
 
-    public FontStyle(PDType1Font font, float fontSize) {
+    public FontStyle(PDFont font, float fontSize) {
         this.font = font;
         this.fontSize = fontSize;
     }
 
-    public PDType1Font getFont() {
+    public PDFont getFont() {
         return font;
     }
 
     public float getFontSize() {
         return fontSize;
     }
-
 
     public static FontStyle normal() {
         return new FontStyle(PDType1Font.HELVETICA, 12);
@@ -30,5 +30,9 @@ public class FontStyle {
 
     public static FontStyle subtitle() {
         return new FontStyle(PDType1Font.HELVETICA_BOLD, 14);
+    }
+
+    public static FontStyle small() {
+        return new FontStyle(PDType1Font.HELVETICA, 8);
     }
 }

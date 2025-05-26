@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.gire.pdf.creators.ShapeDrawerTest" time="0.006" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.gire.pdf.creators.ShapeDrawerTest" time="0.007" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -7,7 +7,7 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\mmlop\OneDrive\Escritorio\pdf-gire\target\test-classes;C:\Users\mmlop\OneDrive\Escritorio\pdf-gire\target\classes;C:\Users\mmlop\.m2\repository\org\apache\pdfbox\pdfbox\2.0.30\pdfbox-2.0.30.jar;C:\Users\mmlop\.m2\repository\org\apache\pdfbox\fontbox\2.0.30\fontbox-2.0.30.jar;C:\Users\mmlop\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\mmlop\.m2\repository\com\openhtmltopdf\openhtmltopdf-pdfbox\1.0.10\openhtmltopdf-pdfbox-1.0.10.jar;C:\Users\mmlop\.m2\repository\org\apache\pdfbox\xmpbox\2.0.24\xmpbox-2.0.24.jar;C:\Users\mmlop\.m2\repository\com\openhtmltopdf\openhtmltopdf-core\1.0.10\openhtmltopdf-core-1.0.10.jar;C:\Users\mmlop\.m2\repository\de\rototor\pdfbox\graphics2d\0.32\graphics2d-0.32.jar;C:\Users\mmlop\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\mmlop\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\mmlop\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\mmlop\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\mmlop\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\mmlop\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\mmlop\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\mmlop\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;"/>
+    <property name="java.class.path" value="C:\Users\Mateo\Desktop\pdf-gire\target\test-classes;C:\Users\Mateo\Desktop\pdf-gire\target\classes;C:\Users\Mateo\.m2\repository\org\apache\pdfbox\pdfbox\2.0.30\pdfbox-2.0.30.jar;C:\Users\Mateo\.m2\repository\org\apache\pdfbox\fontbox\2.0.30\fontbox-2.0.30.jar;C:\Users\Mateo\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Mateo\.m2\repository\com\openhtmltopdf\openhtmltopdf-pdfbox\1.0.10\openhtmltopdf-pdfbox-1.0.10.jar;C:\Users\Mateo\.m2\repository\org\apache\pdfbox\xmpbox\2.0.24\xmpbox-2.0.24.jar;C:\Users\Mateo\.m2\repository\com\openhtmltopdf\openhtmltopdf-core\1.0.10\openhtmltopdf-core-1.0.10.jar;C:\Users\Mateo\.m2\repository\de\rototor\pdfbox\graphics2d\0.32\graphics2d-0.32.jar;C:\Users\Mateo\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\Mateo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\Mateo\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Mateo\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\Mateo\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Mateo\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\Mateo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\Mateo\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;"/>
     <property name="java.vm.vendor" value="Amazon.com Inc."/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,52 +15,52 @@
     <property name="user.timezone" value="America/Buenos_Aires"/>
     <property name="user.country.format" value="US"/>
     <property name="java.vm.specification.version" value="1.8"/>
-    <property name="os.name" value="Windows 10"/>
-    <property name="user.country" value="ES"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="user.country" value="MX"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="sun.boot.library.path" value="C:\Users\mmlop\.jdks\corretto-1.8.0_452\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\mmlop\AppData\Local\Temp\surefire420704755500239552\surefirebooter-20250520113321152_3.jar C:\Users\mmlop\AppData\Local\Temp\surefire420704755500239552 2025-05-20T11-33-20_162-jvmRun1 surefire-20250520113321152_1tmp surefire_0-20250520113321152_2tmp"/>
-    <property name="surefire.test.class.path" value="C:\Users\mmlop\OneDrive\Escritorio\pdf-gire\target\test-classes;C:\Users\mmlop\OneDrive\Escritorio\pdf-gire\target\classes;C:\Users\mmlop\.m2\repository\org\apache\pdfbox\pdfbox\2.0.30\pdfbox-2.0.30.jar;C:\Users\mmlop\.m2\repository\org\apache\pdfbox\fontbox\2.0.30\fontbox-2.0.30.jar;C:\Users\mmlop\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\mmlop\.m2\repository\com\openhtmltopdf\openhtmltopdf-pdfbox\1.0.10\openhtmltopdf-pdfbox-1.0.10.jar;C:\Users\mmlop\.m2\repository\org\apache\pdfbox\xmpbox\2.0.24\xmpbox-2.0.24.jar;C:\Users\mmlop\.m2\repository\com\openhtmltopdf\openhtmltopdf-core\1.0.10\openhtmltopdf-core-1.0.10.jar;C:\Users\mmlop\.m2\repository\de\rototor\pdfbox\graphics2d\0.32\graphics2d-0.32.jar;C:\Users\mmlop\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\mmlop\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\mmlop\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\mmlop\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\mmlop\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\mmlop\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\mmlop\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\mmlop\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Amazon Corretto\jdk1.8.0_442\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\Mateo\AppData\Local\Temp\surefire4427099331399972434\surefirebooter-20250428133513091_3.jar C:\Users\Mateo\AppData\Local\Temp\surefire4427099331399972434 2025-04-28T13-35-12_669-jvmRun1 surefire-20250428133513091_1tmp surefire_0-20250428133513091_2tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\Mateo\Desktop\pdf-gire\target\test-classes;C:\Users\Mateo\Desktop\pdf-gire\target\classes;C:\Users\Mateo\.m2\repository\org\apache\pdfbox\pdfbox\2.0.30\pdfbox-2.0.30.jar;C:\Users\Mateo\.m2\repository\org\apache\pdfbox\fontbox\2.0.30\fontbox-2.0.30.jar;C:\Users\Mateo\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\Mateo\.m2\repository\com\openhtmltopdf\openhtmltopdf-pdfbox\1.0.10\openhtmltopdf-pdfbox-1.0.10.jar;C:\Users\Mateo\.m2\repository\org\apache\pdfbox\xmpbox\2.0.24\xmpbox-2.0.24.jar;C:\Users\Mateo\.m2\repository\com\openhtmltopdf\openhtmltopdf-core\1.0.10\openhtmltopdf-core-1.0.10.jar;C:\Users\Mateo\.m2\repository\de\rototor\pdfbox\graphics2d\0.32\graphics2d-0.32.jar;C:\Users\Mateo\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\Mateo\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\Mateo\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Mateo\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\Mateo\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Mateo\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\Mateo\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\Mateo\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
-    <property name="user.home" value="C:\Users\mmlop"/>
+    <property name="user.home" value="C:\Users\Mateo"/>
     <property name="user.language" value="es"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="java.home" value="C:\Users\mmlop\.jdks\corretto-1.8.0_452\jre"/>
-    <property name="basedir" value="C:\Users\mmlop\OneDrive\Escritorio\pdf-gire"/>
+    <property name="java.home" value="C:\Program Files\Amazon Corretto\jdk1.8.0_442\jre"/>
+    <property name="basedir" value="C:\Users\Mateo\Desktop\pdf-gire"/>
     <property name="file.separator" value="\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\mmlop\AppData\Local\Temp\surefire420704755500239552\surefirebooter-20250520113321152_3.jar"/>
-    <property name="sun.boot.class.path" value="C:\Users\mmlop\.jdks\corretto-1.8.0_452\jre\lib\resources.jar;C:\Users\mmlop\.jdks\corretto-1.8.0_452\jre\lib\rt.jar;C:\Users\mmlop\.jdks\corretto-1.8.0_452\jre\lib\sunrsasign.jar;C:\Users\mmlop\.jdks\corretto-1.8.0_452\jre\lib\jsse.jar;C:\Users\mmlop\.jdks\corretto-1.8.0_452\jre\lib\jce.jar;C:\Users\mmlop\.jdks\corretto-1.8.0_452\jre\lib\charsets.jar;C:\Users\mmlop\.jdks\corretto-1.8.0_452\jre\lib\jfr.jar;C:\Users\mmlop\.jdks\corretto-1.8.0_452\jre\classes"/>
+    <property name="surefire.real.class.path" value="C:\Users\Mateo\AppData\Local\Temp\surefire4427099331399972434\surefirebooter-20250428133513091_3.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Amazon Corretto\jdk1.8.0_442\jre\lib\resources.jar;C:\Program Files\Amazon Corretto\jdk1.8.0_442\jre\lib\rt.jar;C:\Program Files\Amazon Corretto\jdk1.8.0_442\jre\lib\sunrsasign.jar;C:\Program Files\Amazon Corretto\jdk1.8.0_442\jre\lib\jsse.jar;C:\Program Files\Amazon Corretto\jdk1.8.0_442\jre\lib\jce.jar;C:\Program Files\Amazon Corretto\jdk1.8.0_442\jre\lib\charsets.jar;C:\Program Files\Amazon Corretto\jdk1.8.0_442\jre\lib\jfr.jar;C:\Program Files\Amazon Corretto\jdk1.8.0_442\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="java.runtime.version" value="1.8.0_452-b09"/>
-    <property name="user.name" value="mmlop"/>
+    <property name="java.runtime.version" value="1.8.0_442-b06"/>
+    <property name="user.name" value="Mateo"/>
     <property name="path.separator" value=";"/>
     <property name="os.version" value="10.0"/>
-    <property name="java.endorsed.dirs" value="C:\Users\mmlop\.jdks\corretto-1.8.0_452\jre\lib\endorsed"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Amazon Corretto\jdk1.8.0_442\jre\lib\endorsed"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="file.encoding" value="Cp1252"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="localRepository" value="C:\Users\mmlop\.m2\repository"/>
+    <property name="localRepository" value="C:\Users\Mateo\.m2\repository"/>
     <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-8/issues/"/>
-    <property name="java.io.tmpdir" value="C:\Users\mmlop\AppData\Local\Temp\"/>
-    <property name="idea.version" value="2024.3.1.1"/>
-    <property name="java.version" value="1.8.0_452"/>
-    <property name="user.dir" value="C:\Users\mmlop\OneDrive\Escritorio\pdf-gire"/>
+    <property name="java.io.tmpdir" value="C:\Users\Mateo\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2024.3.3"/>
+    <property name="java.version" value="1.8.0_442"/>
+    <property name="user.dir" value="C:\Users\Mateo\Desktop\pdf-gire"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="user.language.format" value="en"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="java.library.path" value="C:\Users\mmlop\.jdks\corretto-1.8.0_452\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Git\cmd;C:\mingw64\bin;C:\Program Files\Apache\maven-3.9.9\bin;C:\Program Files\Java\jdk-17\bin;C:\Users\mmlop\AppData\Local\Microsoft\WindowsApps;C:\Users\mmlop\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\mmlop\AppData\Roaming\npm;D:\Cursos\Java\bin;;."/>
+    <property name="java.library.path" value="C:\Program Files\Amazon Corretto\jdk1.8.0_442\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Amazon Corretto\jdk1.8.0_442\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\swipl\bin;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Apache\bin;C:\Users\Mateo\AppData\Local\Microsoft\WindowsApps;C:\Users\Mateo\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Mateo\AppData\Roaming\npm;;."/>
     <property name="java.vm.info" value="mixed mode"/>
     <property name="java.vendor" value="Amazon.com Inc."/>
-    <property name="java.vm.version" value="25.452-b09"/>
+    <property name="java.vm.version" value="25.442-b06"/>
     <property name="java.specification.maintenance.version" value="6"/>
-    <property name="java.ext.dirs" value="C:\Users\mmlop\.jdks\corretto-1.8.0_452\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Amazon Corretto\jdk1.8.0_442\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
