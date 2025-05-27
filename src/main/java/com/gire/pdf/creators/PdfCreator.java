@@ -4,6 +4,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.PDPageContentStream;
 import org.apache.pdfbox.pdmodel.common.PDRectangle;
+import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 
 import java.io.IOException;
@@ -64,6 +65,17 @@ public class PdfCreator {
             contentStream.endText();
         }
     }
+
+    public void appendText(PDPage page, String text, float x, float y, PDFont font, float fontSize) throws IOException {
+        try (PDPageContentStream contentStream = new PDPageContentStream(document, page, PDPageContentStream.AppendMode.APPEND, true)) {
+            contentStream.beginText();
+            contentStream.setFont(font, fontSize);
+            contentStream.newLineAtOffset(x, y);
+            contentStream.showText(text);
+            contentStream.endText();
+        }
+    }
+
 
     public void saveTo(String filePath) throws IOException {
         Path path = Paths.get(filePath);
