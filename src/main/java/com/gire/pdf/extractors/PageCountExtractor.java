@@ -1,0 +1,15 @@
+package com.gire.pdf.extractors;
+
+import org.apache.pdfbox.pdmodel.PDDocument;
+
+import java.io.File;
+import java.io.IOException;
+
+public class PageCountExtractor {
+
+    public int extractPageCount(File file) throws IOException {
+        try (PDDocument document = PDDocument.load(file)) {
+            return document.getNumberOfPages();
+        }
+    }
+}

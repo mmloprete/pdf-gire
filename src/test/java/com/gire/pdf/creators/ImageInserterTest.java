@@ -31,9 +31,11 @@ public class ImageInserterTest {
         assertTrue(file.exists(), "El archivo PDF debería haberse creado");
         assertTrue(file.length() > 0, "El archivo PDF no debería estar vacío");
 
-//        boolean deleted = file.delete();
-//        if (!deleted) {
-//            System.err.println("No se pudo eliminar el archivo de prueba: " + file.getAbsolutePath());
-//        }
+/*
+        boolean deleted = file.delete();
+        if (!deleted) {
+            System.err.println("No se pudo eliminar el archivo de prueba: " + file.getAbsolutePath());
+        }
+*/
     }
 }

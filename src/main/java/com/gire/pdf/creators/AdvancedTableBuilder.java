@@ -79,7 +79,6 @@ public class AdvancedTableBuilder {
 
         int cols = data.get(0).size();
 
-        // Si se pidió ancho automático
         if (autoColumnWidths) {
             columnWidths = new float[cols];
             for (int i = 0; i < cols; i++) {

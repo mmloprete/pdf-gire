@@ -34,6 +34,37 @@ public class PdfCreator {
         }
     }
 
+    public void appendText(PDPage page, String text, float x, float y) throws IOException {
+        try (PDPageContentStream contentStream = new PDPageContentStream(
+                document, page,
+                PDPageContentStream.AppendMode.APPEND,
+                true,
+                true)) {
+
+            contentStream.beginText();
+            contentStream.setFont(PDType1Font.HELVETICA, 12);
+            contentStream.newLineAtOffset(x, y);
+            contentStream.showText(text);
+            contentStream.endText();
+        }
+    }
+
+    public void addMultilineText(PDPage page, String text, float x, float y) throws IOException {
+        try (PDPageContentStream contentStream = new PDPageContentStream(document, page, PDPageContentStream.AppendMode.APPEND, true)) {
+            contentStream.beginText();
+            contentStream.setFont(PDType1Font.HELVETICA, 12);
+            contentStream.setLeading(14);
+            contentStream.newLineAtOffset(x, y);
+
+            for (String line : text.split("\\r?\\n")) {
+                contentStream.showText(line);
+                contentStream.newLine();
+            }
+
+            contentStream.endText();
+        }
+    }
+
     public void saveTo(String filePath) throws IOException {
         Path path = Paths.get(filePath);
         document.save(path.toFile());

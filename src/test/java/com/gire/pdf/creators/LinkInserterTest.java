@@ -27,10 +27,12 @@ public class LinkInserterTest {
         assertTrue(file.exists());
         assertTrue(file.length() > 0);
 
+/*
         boolean deleted = file.delete();
         if (!deleted) {
             System.err.println("No se pudo eliminar el archivo de prueba: " + file.getAbsolutePath());
         }
+*/
     }
 
 }
