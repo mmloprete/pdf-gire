@@ -20,10 +20,19 @@ public class PdfCreator {
     }
 
     public PDPage addBlankPage() {
-        PDPage page = new PDPage(PDRectangle.A4);
+        return addBlankPageInternal(PDRectangle.A4);
+    }
+
+    public PDPage addBlankPage(PDRectangle size) {
+        return addBlankPageInternal(size);
+    }
+
+    private PDPage addBlankPageInternal(PDRectangle size) {
+        PDPage page = new PDPage(size);
         document.addPage(page);
         return page;
     }
+
 
     public void addText(PDPage page, String text, float x, float y) throws IOException {
         try (PDPageContentStream contentStream = new PDPageContentStream(document, page)) {

@@ -35,4 +35,17 @@ public class FontStyle {
     public static FontStyle small() {
         return new FontStyle(PDType1Font.HELVETICA, 8);
     }
+
+    public static FontStyle ticket() {
+        return new FontStyle(PDType1Font.COURIER, 9f);
+    }
+
+    public static FontStyle ticketBold() {
+        return new FontStyle(PDType1Font.COURIER_BOLD, 9f);
+    }
+
+    public static FontStyle ticketSmall() {
+        return new FontStyle(PDType1Font.COURIER, 8f);
+    }
+
 }

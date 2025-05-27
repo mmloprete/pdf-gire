@@ -8,4 +8,5 @@ public class FontRegistry {
     public static final PDType1Font TITLE = PDType1Font.HELVETICA_BOLD;
     public static final PDType1Font MONO = PDType1Font.COURIER;
     public static final PDType1Font SERIF = PDType1Font.TIMES_ROMAN;
+    public static final PDType1Font TICKET = PDType1Font.COURIER;
 }
