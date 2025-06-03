@@ -24,8 +24,10 @@ import java.util.*;
 
 public class ImageExtractor extends PDFStreamEngine {
 
+    // Array de imagenes
     private final List<BufferedImage> images = new ArrayList<>();
 
+    // Constructor
     public ImageExtractor() throws IOException {
         addOperator(new Concatenate());
         addOperator(new DrawObject());
@@ -36,6 +38,7 @@ public class ImageExtractor extends PDFStreamEngine {
         addOperator(new EndText());
     }
 
+    // Metodo para extraer imagenes de un archivo y almacenarlas y devolverlas en el array anterior
     public List<BufferedImage> extractImages(File file) throws IOException {
         images.clear();
 
@@ -47,7 +50,8 @@ public class ImageExtractor extends PDFStreamEngine {
 
         return images;
     }
-
+// Este metodo se ejecuta para cada operador de contenido en la página.
+// Si el operador es "Do", significa que se está dibujando un objeto, que puede ser una imagen o un formulario.
     @Override
     protected void processOperator(Operator operator, List<COSBase> operands) throws IOException {
         String operation = operator.getName();

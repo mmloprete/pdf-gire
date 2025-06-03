@@ -10,12 +10,14 @@ import java.io.IOException;
 
 public class HeaderFooterManager {
 
+    // Parámetros iniciales del formato (Alineación, estilos y texto de header y footer)
     private final PDDocument document;
     private String headerText = "";
     private String footerText = "";
     private FontStyle style = FontStyle.small();
     private TextAlignment alignment = TextAlignment.CENTER;
 
+    // Setters para aplicar parámetros
     public HeaderFooterManager(PDDocument document) {
         this.document = document;
     }
@@ -40,6 +42,7 @@ public class HeaderFooterManager {
         return this;
     }
 
+    // Aplica los strings parametrizados como headers y footers en caso de haberlos dentro de las páginas del pdf
     public void apply() throws IOException {
         int pageCount = document.getNumberOfPages();
 

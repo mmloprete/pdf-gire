@@ -26,12 +26,16 @@ public class FormBuilder {
     private final PDDocument document;
     private final PDAcroForm acroForm;
 
+    // Genera un formulario dentro del pdf (PDAcroForm)
     public FormBuilder(PDDocument document) {
         this.document = document;
         this.acroForm = new PDAcroForm(document);
         document.getDocumentCatalog().setAcroForm(acroForm);
     }
 
+    // Metodo para añadir campos de texto (Inputs) al formulario, para esto hay que pasarle una página de PdfBox,
+    // El nombre del campo (Label), el valor del string por default del input, las coordenadas en x e y.
+    // Ancho y Alto del input, si es de formato solo lectura y el estilo de la fuente
     public void addTextField(PDPage page, String name, String defaultValue,
                              float x, float y, float width, float height,
                              boolean readOnly, FontStyle style) throws IOException {
@@ -62,6 +66,8 @@ public class FormBuilder {
         acroForm.getFields().add(textBox);
     }
 
+    // Metodo similar a addTextField pero recibe a un checked que me sirve para marcar con una X
+    // El campo del checkbox
     public void addCheckbox(PDPage page, String name, boolean checked,
                             float x, float y, float size, FontStyle style) throws IOException {
 
@@ -112,7 +118,8 @@ public class FormBuilder {
 
 
 
-
+    // Devuelve el alias de la fuente usada (metodo auxiliar). En caso default devuelve el alias de la fuente
+    // Helvetica
     private String getFontAlias(PDFont font) {
         if (font == PDType1Font.HELVETICA) return "Helv";
         if (font == PDType1Font.HELVETICA_BOLD) return "Helv-Bold";

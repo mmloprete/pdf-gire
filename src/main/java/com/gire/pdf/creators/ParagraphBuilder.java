@@ -10,14 +10,17 @@ import java.io.IOException;
 
 public class ParagraphBuilder {
 
+    // Parámetros iniciales de alineación, espaciado e instancia del documento generado
     private final PDDocument document;
     private TextAlignment alignment = TextAlignment.LEFT;
     private float lineSpacing = 1.2f;
 
+    // Setter externo de acceso al documento
     public ParagraphBuilder(PDDocument document) {
         this.document = document;
     }
 
+    // Setters de parámetros
     public ParagraphBuilder withAlignment(TextAlignment alignment) {
         this.alignment = alignment;
         return this;
@@ -28,6 +31,7 @@ public class ParagraphBuilder {
         return this;
     }
 
+    // Escribe un parrafo pasandole pagina, texto, coordenados y fuente
     public void writeParagraph(PDPage page, String text, float x, float y, FontStyle style) throws IOException {
         try (PDPageContentStream contentStream = new PDPageContentStream(document, page,
                 PDPageContentStream.AppendMode.APPEND, true)) {
@@ -59,6 +63,7 @@ public class ParagraphBuilder {
         }
     }
 
+    // Metodo para escribir textos centrados
     public void writeCenteredTitle(PDPage page, String text, float y, FontStyle style) throws IOException {
         this.withAlignment(TextAlignment.CENTER)
                 .writeParagraph(page, text, 0, y, style);

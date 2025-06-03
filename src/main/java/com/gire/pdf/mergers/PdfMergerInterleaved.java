@@ -6,6 +6,8 @@ import org.apache.pdfbox.pdmodel.PDPage;
 import java.io.File;
 import java.io.IOException;
 
+// Une 2 archivos en uno solo pero alternando entre paginas de ambos (si uno tiene mas paginas que otro
+// se alterna entre los archivos hasta que quede uno). (ejemplo: A1, B1, A2, B2, A3, A4, A5)
 public class PdfMergerInterleaved {
     public void mergeInterleaved(File fileA, File fileB, File output) throws IOException {
         try (PDDocument docA = PDDocument.load(fileA);

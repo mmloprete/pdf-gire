@@ -11,10 +11,13 @@ public class ShapeDrawer {
 
     private final PDDocument document;
 
+    // Setter de acceso al documento PDDocument
     public ShapeDrawer(PDDocument document) {
         this.document = document;
     }
 
+    // Dibuja una linea en la página del pdf (pasandole página, coordenadas de inicio del dibujo y fin, ancho de la
+    // linea y color
     public void drawLine(PDPage page, float startX, float startY, float endX, float endY, float width, Color color) throws IOException {
         try (PDPageContentStream contentStream = new PDPageContentStream(document, page,
                 PDPageContentStream.AppendMode.APPEND, true)) {
@@ -26,6 +29,8 @@ public class ShapeDrawer {
         }
     }
 
+    // Dibuja un rectángulo en la pagina del pdf (pasandole página, coordenadas, ancho, alto, color del trazo
+    // y color del relleno
     public void drawRectangle(PDPage page, float x, float y, float width, float height, Color strokeColor, Color fillColor) throws IOException {
         try (PDPageContentStream contentStream = new PDPageContentStream(document, page,
                 PDPageContentStream.AppendMode.APPEND, true)) {

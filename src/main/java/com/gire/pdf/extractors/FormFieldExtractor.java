@@ -9,6 +9,7 @@ import java.util.*;
 
 public class FormFieldExtractor {
 
+    // Extrae elementos de un formulario (PDFBox)
     public List<FormFieldData> extractFields(File file) throws IOException {
         List<FormFieldData> result = new ArrayList<>();
 
@@ -27,6 +28,7 @@ public class FormFieldExtractor {
         return result;
     }
 
+    // Devuelve el alias del campo a analizar del formulario
     private String getFieldType(PDField field) {
         if (field instanceof PDTextField) return "Text";
         if (field instanceof PDCheckBox) return "Checkbox";
@@ -36,6 +38,7 @@ public class FormFieldExtractor {
         return "Unknown";
     }
 
+    // Formato de la data de formulario a extraer (nombre, valor y tipo)
     public static class FormFieldData {
         public final String name;
         public final String value;

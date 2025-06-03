@@ -12,6 +12,8 @@ import java.util.*;
 
 public class AttachmentExtractor {
 
+    // Metodo que extrae data de archivos adjuntos en un pdf
+    // (debo pasarle un archivo para poder cargar desde PDDocument)
     public List<AttachmentData> extractAttachments(File file) throws IOException {
         List<AttachmentData> attachments = new ArrayList<>();
 
@@ -44,6 +46,7 @@ public class AttachmentExtractor {
         return attachments;
     }
 
+    // Formato de los datos a devolver (name, size y type)
     public static class AttachmentData {
         public final String name;
         public final long size;

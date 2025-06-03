@@ -2,6 +2,7 @@ package com.gire.pdf.model;
 
 import org.apache.pdfbox.pdmodel.common.PDRectangle;
 
+// Clase con estandares varios de tamaños de paginas
 public class PageSize {
 
 
@@ -35,7 +36,7 @@ public class PageSize {
     public static final PDRectangle SQUARE_SMALL = new PDRectangle(500f, 500f);
     public static final PDRectangle SQUARE_LARGE = new PDRectangle(800f, 800f);
 
-    public static final PDRectangle TICKET = new PDRectangle(220f, 600f);
+    public static final PDRectangle TICKET = new PDRectangle(958f, 1741f);
     public static final PDRectangle TICKET_SHORT = new PDRectangle(220f, 450f);
     public static final PDRectangle TICKET_WIDE = new PDRectangle(280f, 600f);
 

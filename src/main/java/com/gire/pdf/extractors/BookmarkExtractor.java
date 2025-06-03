@@ -11,6 +11,7 @@ import java.util.List;
 
 public class BookmarkExtractor {
 
+    // Extrae datos de Bookmarks (marcadores) de un archivo PDFBox (los devuelve en formato de lista)
     public List<BookmarkData> extractBookmarks(File file) throws IOException {
         List<BookmarkData> bookmarks = new ArrayList<>();
 
@@ -24,6 +25,7 @@ public class BookmarkExtractor {
         return bookmarks;
     }
 
+    // Metodo interno que recorre recursivamente la estructura de marcadores
     private void processOutline(PDOutlineNode node, List<BookmarkData> result, int level) throws IOException {
         PDOutlineItem current = node.getFirstChild();
         while (current != null) {
@@ -44,6 +46,7 @@ public class BookmarkExtractor {
         }
     }
 
+    // Extrae Data de Bookmark (Titulo, pagina y nivel)
     public static class BookmarkData {
         public final String title;
         public final int page;

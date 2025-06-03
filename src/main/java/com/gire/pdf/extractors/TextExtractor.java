@@ -10,7 +10,7 @@ import java.util.List;
 
 public class TextExtractor {
 
-
+    // Extrae texto de un archivo pdf
     public String extractText(File file) throws IOException {
         try (PDDocument document = PDDocument.load(file)) {
             PDFTextStripper stripper = new PDFTextStripper();
@@ -18,7 +18,7 @@ public class TextExtractor {
         }
     }
 
-
+    // Extrae texto de una pagina dentro de un archivo pdf
     public String extractTextFromPage(File file, int pageNumber) throws IOException {
         try (PDDocument document = PDDocument.load(file)) {
             PDFTextStripper stripper = new PDFTextStripper();
@@ -28,7 +28,7 @@ public class TextExtractor {
         }
     }
 
-
+    // Extrae texto de un pdf pero indicando rango de paginas (pagina de inicio y pagina final)
     public String extractTextFromRange(File file, int startPage, int endPage) throws IOException {
         try (PDDocument document = PDDocument.load(file)) {
             PDFTextStripper stripper = new PDFTextStripper();
@@ -38,7 +38,7 @@ public class TextExtractor {
         }
     }
 
-
+    // Devuelve el texto de cada pagina del pdf y lo almacena y devuelve en una lista
     public List<String> extractTextByPage(File file) throws IOException {
         List<String> pages = new ArrayList<>();
         try (PDDocument document = PDDocument.load(file)) {
@@ -54,7 +54,7 @@ public class TextExtractor {
         return pages;
     }
 
-
+    // Extrae texto de un pdf pero en formato de texto plano (sin saltos de linea)
     public String extractTextFlat(File file) throws IOException {
         return extractText(file).replaceAll("\\r?\\n", " ").trim();
     }

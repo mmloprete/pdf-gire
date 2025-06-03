@@ -3,6 +3,7 @@ package com.gire.pdf.styles;
 import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.graphics.color.PDColor;
 
+// Más manipulación de fuentes (puedo usar estas o las de model)
 public class TextStyle {
 
     private final PDFont font;

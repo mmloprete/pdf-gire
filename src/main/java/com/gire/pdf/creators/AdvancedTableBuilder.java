@@ -12,6 +12,7 @@ import java.util.List;
 
 public class AdvancedTableBuilder {
 
+    //Declaraciones de diseño y espaciados de la tabla
     private final PDDocument document;
     private float[] columnWidths;
     private float rowHeight = 20f;
@@ -25,10 +26,13 @@ public class AdvancedTableBuilder {
 
     private TextAlignment alignment = TextAlignment.LEFT;
 
+
+    // Setter de acceso al documento
     public AdvancedTableBuilder(PDDocument document) {
         this.document = document;
     }
 
+    // Metodos para asignar parametros y funcionalidades
     public AdvancedTableBuilder withColumnWidths(float... widths) {
         this.columnWidths = widths;
         return this;
@@ -74,6 +78,9 @@ public class AdvancedTableBuilder {
         return this;
     }
 
+    // Dibuja la tabla a partir de una página PDPage de PdfBox, coordenadas de inicio y un array de strings como data
+    // Si los anchos de página estan en auto estos los tomará a partir del ancho de las celdas y el tamaño que tome de la fuente
+    // asignada
     public void drawTable(PDPage page, float startX, float startY, List<List<String>> data) throws IOException {
         if (data.isEmpty()) return;
 

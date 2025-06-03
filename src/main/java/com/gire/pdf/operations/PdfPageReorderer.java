@@ -10,6 +10,7 @@ import java.util.List;
 
 public class PdfPageReorderer {
 
+    // Reordena las paginas de un archivo (en otro indicado) indicando el nuevo orden (lista de indices)
     public void reorderPages(File inputFile, File outputFile, List<Integer> newOrder) throws IOException {
         try (PDDocument document = PDDocument.load(inputFile)) {
             if (newOrder.size() != document.getNumberOfPages()) {

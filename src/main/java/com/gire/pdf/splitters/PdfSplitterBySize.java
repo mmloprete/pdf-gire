@@ -9,6 +9,8 @@ import java.util.List;
 
 public class PdfSplitterBySize {
 
+    // funciona similar a los otros 2 metodos de split, solo que divide en paginas iguales (por ejemplo si el pdf
+    // tiene 10 paginas y los divido por 3 paginas, tendre 2 pdfs de 3 paginas y 1 de 4 paginas).
     public List<File> splitBySize(File inputFile, File outputDirectory, int pagesPerSplit) throws IOException {
         List<File> outputFiles = new ArrayList<>();
 

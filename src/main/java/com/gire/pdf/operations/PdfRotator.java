@@ -8,6 +8,7 @@ import java.io.IOException;
 
 public class PdfRotator {
 
+    // Rota una pagina de un archivo (con salida en otro) indicando indice de la pagina a rotar y grados
     public void rotatePage(File inputFile, File outputFile, int pageIndex, int degrees) throws IOException {
         try (PDDocument document = PDDocument.load(inputFile)) {
             if (pageIndex < 0 || pageIndex >= document.getNumberOfPages()) {

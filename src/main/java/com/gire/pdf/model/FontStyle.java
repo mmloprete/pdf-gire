@@ -3,6 +3,7 @@ package com.gire.pdf.model;
 import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 
+// Clase con getters y setters relacionadas al manejo de fuentes
 public class FontStyle {
     private final PDFont font;
     private final float fontSize;
@@ -37,15 +38,15 @@ public class FontStyle {
     }
 
     public static FontStyle ticket() {
-        return new FontStyle(PDType1Font.COURIER, 9f);
+        return new FontStyle(PDType1Font.COURIER, 25f);
     }
 
     public static FontStyle ticketBold() {
-        return new FontStyle(PDType1Font.COURIER_BOLD, 9f);
+        return new FontStyle(PDType1Font.COURIER_BOLD, 25f);
     }
 
     public static FontStyle ticketSmall() {
-        return new FontStyle(PDType1Font.COURIER, 8f);
+        return new FontStyle(PDType1Font.COURIER, 16f);
     }
 
 }

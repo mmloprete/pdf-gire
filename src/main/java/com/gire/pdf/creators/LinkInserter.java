@@ -18,10 +18,13 @@ public class LinkInserter {
 
     private final PDDocument document;
 
+    // Setter para usar de forma externa (debo pasarle una instancia de documento PDDocument)
     public LinkInserter(PDDocument document) {
         this.document = document;
     }
 
+    // Metodo para insertar un link externo pasandole la pagina (PDPage), el texto del link, coordenadas x e y,
+    // el tipo de fuente, la url a la que voy a redireccionar al usuario en formato string
     public void insertExternalLink(PDPage page, String text, float x, float y, FontStyle style, String url, boolean styled) throws IOException {
         try (PDPageContentStream contentStream = new PDPageContentStream(document, page,
                 PDPageContentStream.AppendMode.APPEND, true)) {

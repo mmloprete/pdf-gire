@@ -18,23 +18,27 @@ public class ImageInserter {
         this.document = document;
     }
 
+    // Insertar imagen desde un archivo
     public void insertImageFromFile(PDPage page, String imagePath, float x, float y, float width, float height) throws IOException {
         PDImageXObject pdImage = PDImageXObject.createFromFile(imagePath, document);
         drawImage(page, pdImage, x, y, width, height);
     }
 
+    // Insertar imagen desde un input stream
     public void insertImageFromStream(PDPage page, InputStream inputStream, float x, float y, float width, float height) throws IOException {
         byte[] bytes = toByteArray(inputStream);
         PDImageXObject pdImage = PDImageXObject.createFromByteArray(document, bytes, "image");
         drawImage(page, pdImage, x, y, width, height);
     }
 
+    // Dibuja la imagen a partir de un objeto PDImageXObject
     private void drawImage(PDPage page, PDImageXObject image, float x, float y, float width, float height) throws IOException {
         try (PDPageContentStream contentStream = new PDPageContentStream(document, page, PDPageContentStream.AppendMode.APPEND, true)) {
             contentStream.drawImage(image, x, y, width, height);
         }
     }
 
+    // Metodo auxiliar para pasar un input stream (imagen) a un array de bytes para manipularlo
     private byte[] toByteArray(InputStream in) throws IOException {
         ByteArrayOutputStream buffer = new ByteArrayOutputStream();
         int nRead;

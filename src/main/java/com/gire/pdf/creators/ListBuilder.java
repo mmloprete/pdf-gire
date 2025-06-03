@@ -12,10 +12,13 @@ public class ListBuilder {
 
     private final PDDocument document;
 
+    // Setter para usar de forma externa (debo pasarle PDDocument)
     public ListBuilder(PDDocument document) {
         this.document = document;
     }
 
+    // Escribe una lista desordenada al pasarle una página (PDPage), una lista de strings (items), coordenadas x e y
+    // estilo de fuente y espaciado entre lineas (en y)
     public void writeUnorderedList(PDPage page, List<String> items, float x, float startY, FontStyle style, float lineSpacing) throws IOException {
         float y = startY;
 
@@ -32,6 +35,7 @@ public class ListBuilder {
         }
     }
 
+    // Mismo funcionamiento que writeUnorderedList pero para listas ordenadas
     public void writeOrderedList(PDPage page, List<String> items, float x, float startY, FontStyle style, float lineSpacing) throws IOException {
         float y = startY;
 

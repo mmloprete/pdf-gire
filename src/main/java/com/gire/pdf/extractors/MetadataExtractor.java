@@ -10,6 +10,7 @@ import java.util.Map;
 
 public class MetadataExtractor {
 
+    // Metodo para devolver un mapa con la metadata de un pdf
     public Map<String, String> extractMetadata(File file) throws IOException {
         Map<String, String> metadata = new HashMap<>();
 

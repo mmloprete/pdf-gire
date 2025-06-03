@@ -7,7 +7,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class PdfPageDuplicator {
-
+    // Duplica la pagina indicada de un archivo (debo indicar despues de que pagina insertarla) en
+    // otro archivo indicado
     public void duplicatePage(File inputFile, File outputFile, int pageIndex, int insertAfter) throws IOException {
         try (PDDocument document = PDDocument.load(inputFile)) {
             if (pageIndex < 0 || pageIndex >= document.getNumberOfPages()) {

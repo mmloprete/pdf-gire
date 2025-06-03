@@ -4,7 +4,7 @@ import org.apache.pdfbox.pdmodel.graphics.color.PDColor;
 import org.apache.pdfbox.pdmodel.graphics.color.PDDeviceRGB;
 
 public class TextStyleFactory {
-
+    // Mas definiciones de fuentes (con colores)
     public static TextStyle title() {
         return new TextStyle(FontRegistry.TITLE, 18, new PDColor(new float[]{0, 0, 0}, PDDeviceRGB.INSTANCE));
     }

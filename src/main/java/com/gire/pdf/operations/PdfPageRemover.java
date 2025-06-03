@@ -8,6 +8,8 @@ import java.util.List;
 
 public class PdfPageRemover {
 
+    // Elimina las paginas indicadas de una lista de indices, pasandole un archivo de entrada
+    // En un archivo de salida
     public void removePages(File inputFile, File outputFile, List<Integer> pageIndexesToRemove) throws IOException {
         try (PDDocument document = PDDocument.load(inputFile)) {
 

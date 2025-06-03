@@ -9,6 +9,7 @@ import java.util.List;
 
 public class PdfSplitterByRange {
 
+    // Funcionamiento similar que splitByPage pero indicando rangos a dividir
     public List<File> splitByRanges(File inputFile, File outputDirectory, List<int[]> ranges) throws IOException {
         List<File> outputFiles = new ArrayList<>();
 

@@ -9,13 +9,17 @@ import java.util.*;
 
 public class WordPositionExtractor extends PDFTextStripper {
 
+    // Lista de palabras y pagina que se esta procesando en el momento
     private final List<WordData> words = new ArrayList<>();
     private int currentPage;
 
+    // Asegura que los TextPosition se ordenen como aparecen visualmente en la página.
     public WordPositionExtractor() throws IOException {
         setSortByPosition(true);
     }
 
+    // Extrae palabras de un archivo y las devuelve en una lista de WordData (ver mas abajo) recorriendo
+    // Todas las paginas del documento
     public List<WordData> extractWords(File file) throws IOException {
         words.clear();
 
@@ -33,6 +37,10 @@ public class WordPositionExtractor extends PDFTextStripper {
         return words;
     }
 
+    // PDFBox llama a este metodo cada vez que detecta un bloque de texto
+    // toma la posición del primer carácter del bloque
+    // divide el bloque en palabras individuales
+    // agrega ccada palabra individual como WordData
     @Override
     protected void writeString(String string, List<TextPosition> textPositions) {
         if (!textPositions.isEmpty()) {
@@ -56,6 +64,7 @@ public class WordPositionExtractor extends PDFTextStripper {
         }
     }
 
+    // Formato de la palabra a manipular
     public static class WordData {
         public final String text;
         public final int page;

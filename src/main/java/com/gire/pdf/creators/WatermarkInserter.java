@@ -19,6 +19,7 @@ public class WatermarkInserter {
         this.document = document;
     }
 
+    // Insertar marca de agua (texto) pasandole pagina, texto, estilo de fuente, rotación (grados), opacidad y color
     public void insertTextWatermark(PDPage page, String text, FontStyle style, float rotationDegrees, float opacity, Color color) throws IOException {
         float pageWidth = page.getMediaBox().getWidth();
         float pageHeight = page.getMediaBox().getHeight();
@@ -49,6 +50,7 @@ public class WatermarkInserter {
         }
     }
 
+    // Insertar marca de agua (imagen) pasandole pagina, un objeto imagen (PDImageXObject), escala y opacidad
     public void insertImageWatermark(PDPage page, PDImageXObject image, float scale, float opacity) throws IOException {
         float pageWidth = page.getMediaBox().getWidth();
         float pageHeight = page.getMediaBox().getHeight();

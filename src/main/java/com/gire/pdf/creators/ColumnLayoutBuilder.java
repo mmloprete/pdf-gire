@@ -19,6 +19,8 @@ public class ColumnLayoutBuilder {
         this.document = document;
     }
 
+    // Al pasarle una página PdPage de PdfBox, un texto (string), el margen a tomar en las columnas y una fuente escribe
+    // sobre la página dividiendo el texto en 2 columnas
     public void drawTwoColumnText(PDPage page, String text, float margin, FontStyle style) throws IOException {
         PDRectangle mediaBox = page.getMediaBox();
         float pageWidth = mediaBox.getWidth();
@@ -70,6 +72,7 @@ public class ColumnLayoutBuilder {
         }
     }
 
+    // Mismo funcionamiento que el drawTwoColumnText pero para un numero de columnas a indicar
     public void drawMultiColumnText(PDPage page, String text, int numberOfColumns, float margin, FontStyle style) throws IOException {
         PDRectangle mediaBox = page.getMediaBox();
         float pageWidth = mediaBox.getWidth();
