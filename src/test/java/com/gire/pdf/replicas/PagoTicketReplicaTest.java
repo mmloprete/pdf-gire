@@ -2,11 +2,11 @@ package com.gire.pdf.replicas;
 
 import com.gire.pdf.creators.LinkInserter;
 import com.gire.pdf.creators.PdfCreator;
+import com.gire.pdf.creators.ReceiptLayoutWriter;
 import com.gire.pdf.model.FontStyle;
 import com.gire.pdf.model.PageSize;
 import org.apache.pdfbox.pdmodel.PDPage;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
-import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -16,64 +16,50 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class PagoTicketReplicaTest {
 
-    private static final float FONT_SIZE = 25f;
-    private static final PDFont FONT_TYPE = PDType1Font.COURIER;
-    private static final float FIRST_PADDING_TOP = 1741f - 120f;
-    private static final float SPACING = 14f;
-    private static final float X = 90f;
-
     @Test
     public void shouldMatchItextTicketVisualStyle() throws IOException {
         PdfCreator creator = new PdfCreator();
         PDPage page = creator.addBlankPage(PageSize.TICKET);
 
-        float y = FIRST_PADDING_TOP;
+        FontStyle style = new FontStyle(PDType1Font.COURIER, 22f);
+        ReceiptLayoutWriter writer = new ReceiptLayoutWriter(creator, page, style, 90f, 1595f, 32f);
 
-        creator.appendText(page, "RAPIPAGO             ORIGINAL", X, y, FONT_TYPE, FONT_SIZE);
-        y -= SPACING;
+        writer.line("RAPIPAGO             ORIGINAL");
+        writer.line("Puesto: 998294");
+        writer.line("Fecha: 01/10/2021         Hora: 16:15:13");
+        writer.skip();
+        writer.skip();
 
-        creator.appendText(page, "Puesto: 998294", X, y, FONT_TYPE, FONT_SIZE);
-        y -= SPACING;
-        creator.appendText(page, "Fecha: 01/10/2021         Hora: 16:15:13", X, y, FONT_TYPE, FONT_SIZE);
-        y -= SPACING * 2;
+        writer.line("Código de Operación: 61575e42ff27c1429582828d");
+        writer.line("Empresa: 9 CLARO");
+        writer.line("Importe: $600.00");
+        writer.line("Cliente: FA0060195930");
+        writer.line("Referencia factura: 0820060195930131120000600003SF");
+        writer.line("Nro.Op:128648380697278");
+        writer.line("Cod.Seg:B6BB8388EB");
+        writer.skip();
+        writer.skip();
 
-        creator.appendText(page, "Código de Operación: 61575e42ff27c1429582828d", X, y, FONT_TYPE, FONT_SIZE);
-        y -= SPACING;
-        creator.appendText(page, "Empresa: 9 CLARO", X, y, FONT_TYPE, FONT_SIZE);
-        y -= SPACING;
-        creator.appendText(page, "Importe: $600.00", X, y, FONT_TYPE, FONT_SIZE);
-        y -= SPACING;
-        creator.appendText(page, "Cliente: FA0060195930", X, y, FONT_TYPE, FONT_SIZE);
-        y -= SPACING;
-        creator.appendText(page, "Referencia factura: 0820060195930131120000600003SF", X, y, FONT_TYPE, FONT_SIZE);
-        y -= SPACING;
-        creator.appendText(page, "Nro.Op:128648380697278", X, y, FONT_TYPE, FONT_SIZE);
-        y -= SPACING;
-        creator.appendText(page, "Cod.Seg:B6BB8388EB", X, y, FONT_TYPE, FONT_SIZE);
-        y -= SPACING * 2;
+        writer.line("Forma de Pago      Importe");
+        writer.line("Efectivo           $600.00");
+        writer.line("** TOTAL **        $600.00");
+        writer.skip();
+        writer.skip();
+        writer.skip();
 
-        creator.appendText(page, "Forma de Pago      Importe", X, y, FONT_TYPE, FONT_SIZE);
-        y -= SPACING;
-        creator.appendText(page, "Efectivo           $600.00", X, y, FONT_TYPE, FONT_SIZE);
-        y -= SPACING;
-        creator.appendText(page, "** TOTAL **        $600.00", X, y, FONT_TYPE, FONT_SIZE);
-        y -= SPACING * 2;
 
-        FontStyle style = new FontStyle(FONT_TYPE, FONT_SIZE);
-
-        LinkInserter linkInserter = new LinkInserter(creator.getDocument());
-        linkInserter.insertExternalLink(
+        new LinkInserter(creator.getDocument()).insertExternalLink(
                 page,
                 "VISÍTENOS EN WWW.RAPIPAGO.COM.AR",
-                X + 10,
-                y,
+                100f,
+                writer.getCurrentY(),
                 style,
                 "https://www.rapipago.com.ar",
                 false
         );
+        writer.skip();
 
-        y -= SPACING;
-        creator.appendText(page, "---------------*****---------------", X + 15, y, FONT_TYPE, FONT_SIZE);
+        writer.line("---------------*****---------------", 105f);
 
         File file = new File("test-output/pago-replica-test.pdf");
         creator.saveTo(file.getAbsolutePath());

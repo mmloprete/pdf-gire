@@ -37,6 +37,7 @@ public class PdfCreator {
         return page;
     }
 
+
     // Añade texto (fuente helvetica), pasandole una pagina, texto, y coordenadas (x e y).
     // Si ya hay texto en esas coordenadas lo reemplaza
     public void addText(PDPage page, String text, float x, float y) throws IOException {
@@ -128,6 +129,7 @@ public class PdfCreator {
         document.save(path.toFile());
         document.close();
     }
+
 
     public PDDocument getDocument() {
         return document;
