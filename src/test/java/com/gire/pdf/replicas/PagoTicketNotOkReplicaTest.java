@@ -21,13 +21,14 @@ public class PagoTicketNotOkReplicaTest {
         PdfCreator creator = new PdfCreator();
         PDPage page = creator.addBlankPage(PageSize.TICKET);
 
-        FontStyle style = new FontStyle(PDType1Font.COURIER, 28f);
-        ReceiptLayoutWriter writer = new ReceiptLayoutWriter(creator, page, style, 90f, 1595f, 32f);
+        FontStyle style = new FontStyle(PDType1Font.COURIER, 26f);
+        ReceiptLayoutWriter writer = new ReceiptLayoutWriter(creator, page, style, 125f, 1670f, 32f);
 
         writer.line("PAGO NO EXITOSO");
         writer.skip();
         writer.line("RAPIPAGO             ORIGINAL");
         writer.line("Fecha: 01/10/2021         Hora: 14:54:37");
+        writer.skip();
         writer.skip();
 
         writer.line("Código de Operación: 61574b5d5fc0bc319d5fad5a");
@@ -37,16 +38,13 @@ public class PagoTicketNotOkReplicaTest {
         writer.line("Referencia factura:");
         writer.line("00771151658206030888600000020211001145437");
         writer.skip();
-
-        writer.line("Forma de Pago", 90f);
-        writer.line("Importe", 320f);
+        writer.skip();
         writer.skip();
 
-        writer.line("Efectivo", 90f);
-        writer.line("$100.00", 320f);
-
-        writer.line("** TOTAL **", 90f);
-        writer.line("$100.00", 320f);
+        writer.line("Forma de Pago                  Importe");
+        writer.line("Efectivo                       $100.00");
+        writer.line("** TOTAL **                    $100.00");
+        writer.skip();
         writer.skip();
         writer.skip();
 
